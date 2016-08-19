@@ -17,11 +17,11 @@ GEM
 
 PLATFORMS
   ruby
-  java
 
 DEPENDENCIES
   nokogiri
   sinatra
+  puma
 
 RUBY VERSION
    ruby 1.9.3p551
