@@ -17,15 +17,13 @@ GEM
 
 PLATFORMS
   x86-mingw32
-  ruby
-  java
 
 DEPENDENCIES
   nokogiri
   sinatra
 
 RUBY VERSION
-   ruby 1.9.3p551
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.13.0.rc.1
