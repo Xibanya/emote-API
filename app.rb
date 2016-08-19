@@ -3,6 +3,7 @@ require 'open-uri'
 require 'nokogiri'
 
 #set :port, 3000
+set :protection, :except => [:json_csrf]
 
 get '/' do
   puts 'Basic GET'
