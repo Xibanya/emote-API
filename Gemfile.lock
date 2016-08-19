@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     mini_portile2 (2.1.0)
-    nokogiri (1.6.8-x86-mingw32)
+    nokogiri (1.6.8-java)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pkg-config (1.1.7)
@@ -17,6 +17,7 @@ GEM
 
 PLATFORMS
   ruby
+  java
 
 DEPENDENCIES
   nokogiri
