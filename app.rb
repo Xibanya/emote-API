@@ -27,6 +27,6 @@ get '/emote' do
       @emote_path = item.next_element['src'].to_s
     end
   end
-  body '{"response_type": "in_channel","text": "' + emote_path + '"}'
+  body '{"response_type": "in_channel","text": "' + @emote_path + '"}'
 end
   
