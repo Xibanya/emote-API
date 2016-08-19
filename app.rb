@@ -2,8 +2,6 @@ require 'sinatra'
 require 'open-uri'
 require 'nokogiri'
 
-set :port, 3000
-
 get '/' do
   status 200
   headers \
