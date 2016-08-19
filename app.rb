@@ -13,3 +13,9 @@ get '/' do
   body '{"response_type": "in_channel","text": "It works!"}'
 end
   
+get '/emote' do
+   status 200
+   headers \
+   'Content-Type' => 'application/json'
+   body '{ "test": "yep, it worked" }'
+end
