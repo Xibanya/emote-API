@@ -20,7 +20,7 @@ get '/emote' do
   items = page.css('div.text')
   items.each do |item|
     if item.text =~ /#{search}/
-      status 200
+      status 200 OK
       headers \
         'Content-Type' => 'application/json'
       body '{"response_type": "in_channel","text": "' + item.next_element['src'].to_s + '"}'
