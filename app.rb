@@ -15,15 +15,18 @@ end
 
 get '/emote' do
   puts 'Looking for emote ' + params['text']
-  page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies'))
+  page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies))
+  puts 'loaded URL with Nokogiri'
   search = ':' + params['text'] + ':'
   items = page.css('div.text')
   items.each do |item|
     if item.text =~ /#{search}/
-      status 200 OK
+      emote_path = item.next_element['src'].to_s
+      status 200
       headers \
         'Content-Type' => 'application/json'
-      body '{"response_type": "in_channel","text": "' + item.next_element['src'].to_s + '"}'
+      body '{"response_type": "in_channel","text": "' + emote_path + '"}'
     end
   end
 end
+  
