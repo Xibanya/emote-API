@@ -17,6 +17,8 @@ GEM
 
 PLATFORMS
   x86-mingw32
+  ruby
+  java
 
 DEPENDENCIES
   nokogiri
