@@ -14,6 +14,7 @@ get '/' do
 end
   
 get '/emote' do
+   puts 'a GET for ' + params['text']
    status 200
    headers \
    'Content-Type' => 'application/json'
