@@ -15,9 +15,12 @@ end
   
 get '/emote' do
    search = (':' + params['text'] + ':').to_s
-   page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies))
+   page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies'))
    puts 'a GET for ' + search
    items = page.css('div.text')
+     items.each do |item|
+      puts item.text
+     end
    status 200
    headers \
    'Content-Type' => 'application/json'
