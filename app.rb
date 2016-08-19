@@ -1,11 +1,8 @@
 require 'sinatra'
-require 'nokogiri'
 require 'open-uri'
-
-PAGE_URL = 'http://forums.somethingawful.com/misc.php?action=showsmilies'
+require 'nokogiri'
 
 get '/' do
-  "heya"
   status 200
   headers \
     'Content-Type' => 'application/json'
@@ -13,7 +10,7 @@ get '/' do
 end
 
 get '/emote' do
-  page = Nokogiri::HTML(open(PAGE_URL))
+  page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies'))
   search = ':' + params['text'] + ':'
   items = page.css('div.text')
   items.each do |item|
