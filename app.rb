@@ -14,9 +14,10 @@ get '/' do
 end
   
 get '/emote' do
-   puts 'a GET for ' + params['text']
+   search = (':' + params['text'] + ':').to_s
+   puts 'a GET for ' + search
    status 200
    headers \
    'Content-Type' => 'application/json'
-   body '{ "test": "yep, it worked" }'
+   body '{ "test": "#{search}" }'
 end
