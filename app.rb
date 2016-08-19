@@ -25,8 +25,8 @@ get '/emote' do
   items.each do |item|
     if item.text =~ /#{search}/
       @emote_path = item.next_element['src'].to_s
-      end
-      end
-      body '{"response_type": "in_channel","text": "' + emote_path + '"}'
+    end
+  end
+  body '{"response_type": "in_channel","text": "' + emote_path + '"}'
 end
   
