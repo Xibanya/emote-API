@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     mini_portile2 (2.1.0)
-    nokogiri
+    nokogiri (1.6.8-x86-mingw32)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pkg-config (1.1.7)
@@ -21,7 +21,6 @@ PLATFORMS
 DEPENDENCIES
   nokogiri
   sinatra
-  puma
 
 RUBY VERSION
    ruby 1.9.3p551
