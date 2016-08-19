@@ -19,7 +19,7 @@ get '/emote' do
      'Content-Type' => 'application/json' 
   puts 'Looking for emote ' + params['text']
   page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies))
-  puts 'loaded URL with Nokogiri'
+  puts 'loaded smilies page'
   search = ':' + params['text'] + ':'
   items = page.css('div.text')
   items.each do |item|
