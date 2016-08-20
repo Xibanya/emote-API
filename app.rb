@@ -17,6 +17,8 @@ get '/emote' do
    search = (':' + params['text'] + ':').to_s
    page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies'))
    puts 'a GET for ' + search
+   puts 'team domain: ' + params['team_domain'].to_s
+   puts 'username: ' + params['user_name'].to_s
    items = page.css('div.text')
      items.each do |item|
       if item.text =~ /#{search}/
