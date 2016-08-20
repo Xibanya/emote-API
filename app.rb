@@ -27,5 +27,5 @@ get '/emote' do
    status 200
    headers \
    'Content-Type' => 'application/json'
-   body '{ "response_type": "in_channel", "text": "#{@img}" }'
+   body '{ "response_type": "in_channel", "text": "' + @img + '" }'
 end
