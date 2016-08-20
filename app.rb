@@ -19,7 +19,10 @@ get '/emote' do
    puts 'a GET for ' + search
    items = page.css('div.text')
      items.each do |item|
-      puts item.text
+      if item.text =~ /search/
+        puts 'found it'
+        
+      end
      end
    status 200
    headers \
