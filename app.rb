@@ -12,7 +12,7 @@ get '/' do
 end
   
 get '/emote' do
-   search = (':' + params['text'] + ':').to_s
+   search = (':' + params['text'] + ':?').to_s
    page = Nokogiri::HTML(open('http://forums.somethingawful.com/misc.php?action=showsmilies'))
    items = page.css('div.text')
      items.each do |item|
